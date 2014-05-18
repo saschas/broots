@@ -18,9 +18,14 @@ div.vorschau {
 		height: 100%;
 		position: absolute;
 		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
 	}
 }
-
+div.video.start {
+right: 0!important;
+}
 a.startLink {
 	display:table-cell;
 	vertical-align:middle;

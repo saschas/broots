@@ -12,7 +12,7 @@ $loop = new WP_Query( $args ); ?>
 					$time = get_field('uhrzeit');
 					$projektName = get_the_title();
 					echo '<div class="slide info">';
-						echo '<time>'.$time.'</time>';
+						//echo '<time>'.$time.'</time>';
 						$einstieg = get_field('einstiegsartikel');
 								if( $einstieg ):
 									foreach( $einstieg as $einstiegsPunkt ):

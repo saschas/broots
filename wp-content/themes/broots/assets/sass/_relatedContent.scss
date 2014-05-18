@@ -31,8 +31,15 @@ transition-duration: .5s;
 			height: 100%;
 			position: absolute;
 		}
+		& a.playLink {
+			width: 100%;
+			height: 100%;
+			display: block;
+			display:block;
+		}
 		& a.backgroundLink {
 			width: 15%;
+			min-width: 250px;
 			height: 100%;
 			position: absolute;
 		}

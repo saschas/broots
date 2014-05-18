@@ -22,7 +22,7 @@
    						echo '</div>';//end of info
    					echo '</div>';//end of left
    					echo '<div class="right">';
-						echo '<div class="play"></div>';
+						echo '<a href="'.get_relative_permalink($relatedArticleLink).'" class="post-link playLink"><div class="play"></div></a>';
 					echo '</div>';//end of right
 				echo '</div>';//end of inner
 			echo '</div>';//end of teaser

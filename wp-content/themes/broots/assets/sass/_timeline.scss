@@ -9,14 +9,17 @@
 		cursor:pointer;
 		min-height: 45px;
 		z-index: 9;
-	&:hover{
-		transition-duration:.25s;
-		min-height:300px!important;
+
+	.no-touch{
+	 	&:hover{
+			transition-duration:.25s;
+			min-height:300px!important;
+		}
 	}
-	&.animationHeightIn {
+	.no-touch &.animationHeightIn {
 		animation:animateHeightIn .5s forwards;
 	}
-	&.animationHeightOut {
+	.no-touch &.animationHeightOut {
 		animation:animateHeightOut .5s forwards;
 	}
 	&.fixed{
@@ -72,7 +75,7 @@
 		& a{
 			color:#fff;
 
-			&:hover{
+			.no-touch &:hover{
 				color:$dark;
 			}
 		}

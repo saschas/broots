@@ -13,9 +13,11 @@ div#menu {
   width: 50px;
   height: 40px;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   left: 40px;
   top: 45px;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
   border-top: 10px solid #fe574a;
   border-bottom: 10px solid #fe574a;
   cursor: pointer; }
@@ -29,22 +31,25 @@ div#menu {
     bottom: 0;
     margin: auto;
     position: absolute; }
-  div#menu.open::before {
-    content: '';
-    display: block;
-    width: 100%;
+  div#menu.open {
     height: 10px;
-    background: #fe574a;
-    top: -40px;
-    bottom: 0;
-    margin: auto;
-    position: absolute;
-    -webkit-transform: rotate(-90deg); }
+    left: 475px;
+    border-bottom: 10px solid transparent;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+    div#menu.open::before {
+      top: -10px;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+    .no-touch div#menu.open:hover {
+      border-bottom: 10px solid transparent; }
   .downUnder div#menu {
     top: 85px; }
-  div#menu:hover {
+  .no-touch div#menu:hover {
     border-color: #252331; }
-    div#menu:hover::before {
+    .no-touch div#menu:hover::before {
       background: #252331; }
 
 div.subnavi-container {
@@ -55,7 +60,13 @@ div.subnavi-container {
   z-index: 999;
   height: 100%;
   width: 425px;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
   overflow: hidden; }
+  div.subnavi-container.open {
+    left: 0 !important; }
+  div.subnavi-container.closed {
+    left: -425px !important; }
 
 .subnavi {
   padding-right: 10px;
@@ -153,7 +164,9 @@ div.subnavi-container {
   color: #fff;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  -webkit-animation: fadeIn .25s forwards;
+  animation: fadeIn .25s forwards; }
   .loading .inner {
     display: table-cell;
     vertical-align: middle;
@@ -171,10 +184,12 @@ div.subnavi-container {
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    right: -100%; }
 
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    right: 0%; } }
 div.vorschau {
   width: 100%;
   height: 100%;
@@ -193,7 +208,13 @@ div.vorschau {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0; }
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; }
+
+div.video.start {
+  right: 0 !important; }
 
 a.startLink {
   display: table-cell;
@@ -242,14 +263,38 @@ div.video {
   height: 100%;
   position: absolute;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s; }
+  div.video.main.finished {
+    left: -50%; }
+    div.video.main.finished::before {
+      content: '';
+      display: block;
+      height: 100%;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      background: rgba(50, 50, 50, 0.7);
+      z-index: 99;
+      -webkit-background-size: 100px;
+      background-size: 100px;
+      background-image: url(img/replay.png);
+      background-position: center center;
+      background-repeat: no-repeat; }
 
-#video_background {
+#video_background, #video_start {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
+  top: -100%;
+  left: -100%;
+  right: -100%;
+  bottom: -100%;
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
@@ -267,12 +312,13 @@ div.video {
   z-index: 1; }
 
 section.nextread {
-  width: 0;
+  width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
   right: -100%;
   z-index: 99999;
+  display: none;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50%;
@@ -312,14 +358,14 @@ section.nextread {
   cursor: pointer;
   min-height: 45px;
   z-index: 9; }
-  .timeline:hover {
+  .timeline .no-touch:hover {
     -webkit-transition-duration: .25s;
     transition-duration: .25s;
     min-height: 300px !important; }
-  .timeline.animationHeightIn {
+  .no-touch .timeline.animationHeightIn {
     -webkit-animation: animateHeightIn .5s forwards;
     animation: animateHeightIn .5s forwards; }
-  .timeline.animationHeightOut {
+  .no-touch .timeline.animationHeightOut {
     -webkit-animation: animateHeightOut .5s forwards;
     animation: animateHeightOut .5s forwards; }
   .timeline.fixed {
@@ -362,7 +408,7 @@ section.nextread {
       border-left: 5px solid #fff; }
     .timeline div.box a {
       color: #fff; }
-      .timeline div.box a:hover {
+      .no-touch .timeline div.box a:hover {
         color: #252331; }
     .timeline div.box .inner {
       top: 60px;
@@ -393,12 +439,15 @@ keyframes animateHeightOut 0%  {
 keyframes animateHeightOut 100%  {
   height: 45px; }
 
+.no-touch .vorschau.section div.play {
+  display: none; }
+
 .play {
   width: 200px;
   height: 200px;
   -webkit-transition-duration: .15s;
   transition-duration: .15s;
-  border: 20px solid #fe574a;
+  border: 10px solid #fe574a;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -413,10 +462,10 @@ keyframes animateHeightOut 100%  {
     display: block;
     width: 0;
     height: 0;
-    border-right: 50px solid transparent;
-    border-left: 80px solid #fe574a;
-    border-bottom: 50px solid transparent;
-    border-top: 50px solid transparent;
+    border-right: 3em solid transparent;
+    border-left: 3em solid #fe574a;
+    border-bottom: 3em solid transparent;
+    border-top: 3em solid transparent;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -575,6 +624,8 @@ div.project, section.hauptprojekt {
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
   background: #ccc; }
+  .autor .inner {
+    width: 100% !important; }
   .autor span.autorName {
     font-size: 1.4em;
     font-weight: bold;
@@ -594,8 +645,8 @@ div.project, section.hauptprojekt {
       float: left; }
 
 div[data-type="author"] {
-  width: 470px;
-  height: 240px;
+  width: 50%;
+  height: 220px;
   position: relative;
   text-align: center;
   padding-top: 90px;
@@ -794,8 +845,14 @@ section.sideBar {
       width: 100%;
       height: 100%;
       position: absolute; }
+    .relatedContent .teaser a.playLink {
+      width: 100%;
+      height: 100%;
+      display: block;
+      display: block; }
     .relatedContent .teaser a.backgroundLink {
       width: 15%;
+      min-width: 250px;
       height: 100%;
       position: absolute; }
     .relatedContent .teaser .inner {
@@ -978,10 +1035,24 @@ a.teaserLink {
   max-height: 100%;
   position: relative; }
 
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0; }
+  .main-wrapper.open {
+    overflow: hidden; }
+
 #content {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s; }
+  #content.open {
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    left: 425px !important; }
 
 .content {
   width: 100%;

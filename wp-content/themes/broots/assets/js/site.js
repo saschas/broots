@@ -1,15 +1,8 @@
 jQuery(document).ready(function($){
 
-
 //mobile switch
 function detectmob() { 
-if( navigator.userAgent.match(/Android/i)
-|| navigator.userAgent.match(/webOS/i)
-|| navigator.userAgent.match(/iPhone/i)
-|| navigator.userAgent.match(/iPod/i)
-|| navigator.userAgent.match(/BlackBerry/i)
-|| navigator.userAgent.match(/Windows Phone/i)
-){
+if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i) ){
    return true;
  }
 else {
@@ -22,7 +15,8 @@ if(detectmob()){
 }
 else{}
 //end of mobile switch
-/*
+
+	/*
 	var options = {
 	  	panelSelector: '.section',
 	  	directionThreshold: 10,
@@ -31,63 +25,46 @@ else{}
 
 	$('body').panelSnap(options);
 */
+
 	var $subnaviContainerWidth,$elementsToMove,$handler,$hoverClicker,$clicker;
 
 	$handler = '.subnavi-container, div#menu';
-	$hoverClicker = '.subnavi-container';
+	$hoverClicker = '.subnavi-container,#content, footer,#menu, .main-wrapper';
 	$clicker = 'div#menu';
 
 	$subnaviContainerWidth = 425;
-	$elementsToMove = '#content, footer, .timeline.fixed';
+	$elementsToMove = '';
+
+
+//Events
+
+
 	$('.startLink').click(function(){
-		$('html,body').animate({
-			top:'100%'
-		},500);
+		$('html,body').animate({scrollTop: window.innerHeight}).removeAttr('style');
 	});
 
-
-
-
-	$($handler).hoverClickToggle(
+	$($handler).clickToggle(
 		function(){
-			$($hoverClicker).animate({
-				left:'0px'
-			},250);
+			$($hoverClicker).addClass('open').removeClass('closed');
 			$('body').css({
 				'overflow-y':'hidden'
 			});
-			$('#menu').animate({
-				left:'475px'
-			},250);
-			$($elementsToMove).animate({
-				left:$subnaviContainerWidth+'px'
-			},250);
+			//$('#menu, .main-wrapper').addClass('open').removeClass('closed');
+			//$($elementsToMove).addClass('open').removeClass('closed');
 		},
 		function(){
-			$($hoverClicker).animate({
-				left:-$subnaviContainerWidth+'px'
-			},250);
+			$($hoverClicker).addClass('closed').removeClass('open')
 			$('body').css({
 				'overflow-y':'visible'
 			});
-			$('#menu').animate({
-				left:'40px'
-			},250);
-			$($elementsToMove).animate({
-				left:'0px'
-			},250);
+			//$('#menu, .main-wrapper').addClass('closed').removeClass('open');
+			//$($elementsToMove).addClass('closed').removeClass('open');
 	});//end of hoverClickToggle
-
-	$('.timeline').hoverClickToggle(
-		function(){
-			$('.timeline').removeClass('animationHeightOut').addClass('animationHeightIn');
-		},function(){
-			$('.timeline').removeClass('animationHeightIn').addClass('animationHeightOut');
-	});
 
 	window.onscroll = function () {
 			var $timelineContainer = $('#content');
 			var $timeline = $('.timeline');
+			var $body = $('body');
 			//var $timelineLarge = $('.timeline.animationHeightIn');
 			var height = $(this).height();
 			
@@ -104,7 +81,7 @@ else{}
 			}
 
 			var $startVideo = $('#video_start').get(0);
-			if($scrollTop>=$timelineContainer.offset().top){
+			if($scrollTop>=$timelineContainer.offset().top-300){
 				$startVideo.pause();
 			}
 			else{
@@ -114,15 +91,18 @@ else{}
 
 			//wenn es die Timeline erreicht
 			if($scrollTop>=$timelineTopSmall){
-				$('body').addClass('downUnder');
+				$body.addClass('downUnder');
 				$timeline.addClass('fixed');
 			}
 			else{
 				$timeline.removeClass('fixed');
-				$('body').removeClass('downUnder');
+				$body.removeClass('downUnder');
 			}
 			//console.log($scrollTop,$timelineTop)
 	};
+
+	$('.play.start').click(function(){
+	});
 
 
 });

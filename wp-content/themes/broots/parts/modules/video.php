@@ -22,7 +22,7 @@ while ( have_rows('videosource') ) : the_row();
         echo '<div class="play"></div>';
         echo '<div class="loader"></div>';
 
-        echo '<div class="video"><video id="video_background" preload="true" poster="'.$posterLink.'">';
+        echo '<div class="video main"><video id="video_background" preload="true" poster="'.$posterLink.'">';
         	echo '<source src="'.$rootVerzeichnis.$MP4Url.'" type="'.$MP4Mime.'">';
         	echo '<source src="'.$rootVerzeichnis.$OGGUrl.'" type="'.$OGGMime.'">';
         	echo '<source src="'.$rootVerzeichnis.$webMUrl.'" type="'.$webMMime.'">';

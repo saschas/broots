@@ -3,7 +3,10 @@ margin-bottom: 5%;
 position: relative;
 transition-duration: .5s;
 background: #ccc;
-
+	
+	& .inner{
+		width: 100%!important;
+	}
 	& span.autorName {
 		font-size: 1.4em;
 		font-weight: bold;
@@ -29,8 +32,8 @@ background: #ccc;
 }
 
 div[data-type="author"] {
-	width: 470px;
-	height: 240px;
+	width: 50%;
+	height: 220px;
 	position: relative;
 	text-align: center;
 	padding-top: 90px;

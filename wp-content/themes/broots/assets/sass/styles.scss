@@ -98,11 +98,27 @@ a.teaserLink {
 	//transition-duration:.25s;
 }
 
+.main-wrapper{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left: 0;
+	&.open {
+		overflow: hidden;
+	}
+}
 
 #content {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	transition-duration:.25s;
+
+	&.open{
+		transition-duration:.25s;
+		left:425px!important;
+	}
+
 }
 .content {
 	width: 100%;

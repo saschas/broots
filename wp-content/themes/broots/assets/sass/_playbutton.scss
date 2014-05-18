@@ -1,8 +1,13 @@
+//set to display none if desktop
+.no-touch .vorschau.section div.play {
+	display: none;
+}
+
 .play {
 	width: 200px;
 	height:200px;
 	transition-duration:.15s;
-	border: 20px solid $neon;
+	border: 10px solid $neon;
 	border-radius: 50%;
 	position:absolute;
 	top:0;
@@ -17,10 +22,10 @@
 		display: block;
 		width: 0;
 		height: 0;
-		border-right: 50px solid transparent;
-		border-left: 80px solid $neon;
-		border-bottom: 50px solid transparent;
-		border-top: 50px solid transparent;
+		border-right: 3em solid transparent;
+		border-left: 3em solid $neon;
+		border-bottom: 3em solid transparent;
+		border-top: 3em solid transparent;
 		position: absolute;
 		top:0;
 		bottom:0;

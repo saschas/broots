@@ -15,8 +15,6 @@ Starkers_Utilities::get_template_parts( $parts );
 
 ?>
 
-
-
 <?php
 
 echo '<div class="vorschau section"><div class="inner">';
@@ -50,8 +48,7 @@ if($post_query->have_posts() ) {
         $webMObj = get_sub_field('webm');
         $webMMime = $webMObj['mime_type'];
         $webMUrl = $webMObj['url'];
-
-        echo '<div class="video"><video id="video_start" preload="true" poster="'.$posterLink.'" autoplay="false" loop>';
+        echo '<div class="video start"><video id="video_start" preload="true" poster="'.$posterLink.'" loop>';
             echo '<source src="'.$MP4Url.'" type="'.$MP4Mime.'">';
             echo '<source src="'.$OGGUrl.'" type="'.$OGGMime.'">';
             echo '<source src="'.$webMUrl.'" type="'.$webMMime.'">';
@@ -84,9 +81,9 @@ if($post_query->have_posts() ) {
 
 echo '</div></div>';
  ?>
-      
 
-<div id="content" class="section"></div>
-
+<div class="main-wrapper">
+    <div id="content" class="section"></div>
+</div>
 
 <!--?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?-->
