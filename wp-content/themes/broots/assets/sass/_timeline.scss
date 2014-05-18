@@ -1,0 +1,159 @@
+.timeline {
+		width: 100%;
+		position: absolute;
+		height: 45px;
+		background:$neon_transparent;
+		bottom: 0;
+		left: 0;
+		overflow:hidden;
+		cursor:pointer;
+		min-height: 45px;
+		z-index: 9;
+	&:hover{
+		transition-duration:.25s;
+		min-height:300px!important;
+	}
+	&.animationHeightIn {
+		animation:animateHeightIn .5s forwards;
+	}
+	&.animationHeightOut {
+		animation:animateHeightOut .5s forwards;
+	}
+	&.fixed{
+		top:0;
+		position:fixed;
+
+		& .buffered{
+			top:0!important;
+			bottom:inherit;
+		}
+		& .box{
+			//top:5px;
+		}
+	}
+	
+	& .current {
+		width: 0%;
+		height: 100%;
+		position: absolute;
+		background: $neon;
+		transition-duration:.25s;
+	}
+
+	& .buffered{
+		position: absolute;
+		bottom: 0;
+		background: rgba(50,50,50,0.2);
+		height: 5px;
+		width: 100%;
+		& .inner{
+			width: 0;
+			position: absolute;
+			bottom: 0;
+			height: 100%;
+			background: rgba(250,250,250,0.4);
+		}
+	}
+
+	& div.box {
+		height: 50px;
+		position: absolute;
+		border-left: 5px solid #fff;
+		left: 5%;
+		padding-left: 10px;
+		color: #fff;
+		font-family: 'Open Sans',sans-serif;
+		font-size: 0.9em;
+		display: inline-block;
+		width: 150px;
+		&.saw{
+			border-left: 5px solid #fff;
+		}
+		& a{
+			color:#fff;
+
+			&:hover{
+				color:$dark;
+			}
+		}
+		& .inner {
+			top:60px;
+			position:relative;
+			margin-left: -30px;
+
+			& time{
+				margin-bottom:10px;
+			}
+		}
+	}
+}
+
+$height:45px;
+
+@-webkit-keyframes animateHeightIn{
+	0%{
+		height:$height;
+	}
+	100%{
+		height:300px;
+	}
+}
+@-moz-keyframes animateHeightIn{
+	0%{
+		height:$height;
+	}
+	100%{
+		height:300px;
+	}
+}
+@-o-keyframes animateHeightIn{
+	0%{
+		height:$height;
+	}
+	100%{
+		height:300px;
+	}
+}
+keyframes animateHeightIn{
+	0%{
+		height:$height;
+	}
+	100%{
+		height:300px;
+	}
+}
+
+//out
+
+@-webkit-keyframes animateHeightOut{
+	0%{
+		height:300px;
+	}
+	100%{
+		height:$height;
+	}
+}
+@-moz-keyframes animateHeightOut{
+	0%{
+		height:300px;
+	}
+	100%{
+		height:$height;
+	}
+}
+@-o-keyframes animateHeightOut{
+	0%{
+		height:300px;
+	}
+	100%{
+		height:$height;
+	}
+}
+keyframes animateHeightOut{
+	0%{
+		height:300px;
+	}
+	100%{
+		height:$height;
+	}
+}

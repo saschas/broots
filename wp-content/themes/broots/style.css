@@ -1,0 +1,26 @@
+/*
+Theme Name: 	broots
+Theme URI: 		none
+Description: 	Broots — Sonderausgabe
+Version: 		0.0
+Author: 		Sara Hesse & Sascha sigl
+Author URI: 	
+Tags: 			
+*/
+
+/*
+===========================
+CONTENTS:
+
+01 Sensible defaults
+02 Typography
+03 Media queries 
+===========================
+*/
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01 Sensible defaults ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+@import "assets/css/reset.css";
+@import "assets/stylesheets/styles.css";

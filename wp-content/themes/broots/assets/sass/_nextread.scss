@@ -1,0 +1,35 @@
+section.nextread {
+	width: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: -100%;
+	z-index: 99999;
+	background-size: cover;
+	background-position: 50%;
+	overflow: hidden;
+
+	& .inner {
+		width: 420px;
+		background: rgba(255,255,255,.5);
+		padding: 40px;
+		box-sizing: border-box;
+		bottom: 50px;
+		position: absolute;
+		margin: 20px;
+
+		/*
+		&::before{
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border-top:30px solid #fff;
+			border-left:30px solid transparent;
+			border-right:30px solid transparent;
+			border-bottom:30px solid transparent;
+			position:absolute;
+		}
+		*/
+	}
+}

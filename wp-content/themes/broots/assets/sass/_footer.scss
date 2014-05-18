@@ -1,0 +1,29 @@
+footer {
+	height: 300px;
+	z-index: 1;
+	position: relative;
+	bottom: 0;
+
+	& div.inner {
+		width: 330px;
+		margin: 0 auto;
+	}
+}
+
+    #heythere .gestalten {
+      height: 350px;
+      width: 600px; }
+      #heythere .gestalten .augen-brut {
+        margin: 55px 0 0 270px;
+        -webkit-animation: blinksmall 4s infinite; }
+      #heythere .gestalten .augen-broots {
+        margin: 140px 0 0 360px;
+        -webkit-animation: blinksmallbroots 3s infinite; }
+    #heythere .spitzmarke-about {
+      font-size: 1em;
+      line-height: 1em;
+      padding: 53px 0 0 0; }
+    #heythere .headline-about {
+      font-size: 2em; }
+      #heythere .headline-about p {
+        font-size: 3em; }

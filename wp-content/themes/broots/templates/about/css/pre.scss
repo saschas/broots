@@ -1,0 +1,200 @@
+
+html,
+body,
+ul,
+ol {
+   margin: 0;
+  padding: 0;
+}
+
+ul {list-style: none;}
+
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+
+@mixin backface-visibility($backface-visibility) {
+  -webkit-backface-visibility:$backface-visibility;
+  -moz-backface-visibility:$backface-visibility;
+  -ms-backface-visibility:$backface-visibility;
+  -o-backface-visibility:$backface-visibility;
+  backface-visibility:$backface-visibility;
+}
+@mixin box-sizing($box-sizing) {
+  -webkit-box-sizing:$box-sizing;
+  -moz-box-sizing:$box-sizing;
+  -ms-box-sizing:$box-sizing;
+  -o-box-sizing:$box-sizing;
+  box-sizing:$box-sizing;
+}
+
+
+@mixin background-size($background-size) {
+  -webkit-background-size:$background-size;
+  -moz-background-size:$background-size;
+  -ms-background-size:$background-size;
+  -o-background-size:$background-size;
+  background-size:$background-size;
+}
+
+
+@mixin bg-image($repeat: no-repeat) {
+  background-repeat: $repeat;
+
+}
+
+@mixin smoothing($smoothing) {
+  -webkit-font-smoothing: $smoothing;
+  -moz-font-smoothing: $smoothing;
+  -ms-font-smoothing: $smoothing;
+  -o-font-smoothing: $smoothing;
+  font-smoothing: $smoothing;
+}
+
+@mixin transition($transition) {
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -transition:$transition;
+
+
+}
+
+
+ 
+
+a {text-decoration: none;
+}
+
+
+@mixin red($colorValue: #fe574a){
+   background-color:$colorValue;
+}
+
+@mixin blue($colorValue: #e24840){
+   background-color:$colorValue;
+}
+
+@mixin dark($colorValue: #272727){
+   background-color:$colorValue;
+}
+
+@mixin white($colorValue: #ffffff){
+   background-color:$colorValue;
+}
+
+
+
+
+
+
+@mixin red-font($colorValue: #fe574a){
+   color:$colorValue;
+}
+
+@mixin blue-font($colorValue: #c93d3d){
+   color:$colorValue;
+}
+
+@mixin dark-font($colorValue: #272727){
+   color:$colorValue;
+}
+
+@mixin white-font($colorValue: #ffffff){
+   color:$colorValue;
+}
+
+
+
+
+
+
+
+@mixin a-text($colorValue){
+     border-bottom:1px solid $colorValue;
+     color:$colorValue;
+     padding:0px 0 2px 0;
+     position: relative;
+}
+
+
+
+
+
+
+
+@mixin font-xxs($sizeValue: 0.8em){
+   font-size:$sizeValue;
+   line-height: 0.8em;
+}
+
+
+@mixin font-xs($sizeValue: 1em){
+   font-size:$sizeValue;
+   line-height: 1em;
+}
+
+@mixin font-s($sizeValue: 1.3em){
+   font-size:$sizeValue;
+   line-height: 1.4em;
+}
+
+@mixin font-m($sizeValue: 1.6em){
+   font-size:$sizeValue;
+   line-height: 1.4em;
+}
+
+@mixin font-l($sizeValue: 2em){
+   font-size:$sizeValue;
+
+}
+
+@mixin font-xl($sizeValue: 3em){
+   font-size:$sizeValue;
+}
+
+@mixin font-xxl($sizeValue: 4em){
+   font-size:$sizeValue;
+}
+
+
+@mixin transrotate($transrotate: 90deg) {
+  transform: rotate $transrotate;
+-ms-transform: rotate $transrotate;
+-webkit-transform: rotate $transrotate;
+}
+
+
+@mixin line($colorline) {
+    width:2px;
+    background-color: $colorline;
+    position: absolute;
+    bottom:0;
+    top:auto;
+    left:50%;
+    margin:-1px 0 0 -2px;
+}
+
+@mixin linevertical($linewidth) {
+    height:2px;
+    width: $linewidth;
+    background-color: #fff;
+    position: relative;
+    top:auto;
+    left:50%;
+}
+
+
+

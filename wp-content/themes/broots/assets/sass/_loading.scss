@@ -1,0 +1,36 @@
+.loading{
+	background: $dark;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	display: table;
+	width: 100%;
+	height: 100%;
+	color:#fff;
+	background-size:cover;
+	background-position:center center;
+	//animation:fadeIn .5s infinite;
+	& .inner{
+		display:table-cell;
+		vertical-align:middle;
+		text-align:center;
+	}
+
+	&.cat{background-image:url(loading/cat.gif)}
+	&.disco{background-image:url(loading/disco.gif)}
+	&.eddy{background-image:url(loading/eddy.gif)}
+	&.power{background-image:url(loading/power.gif)}
+	&.twinpeaks{background-image:url(loading/twinpeaks.gif)}
+}
+
+@-webkit-keyframes fadeIn{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}

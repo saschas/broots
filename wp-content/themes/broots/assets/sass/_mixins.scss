@@ -1,0 +1,11 @@
+@mixin sectionStyle($width:60%){
+	width: $width;
+	max-width: 1280px;
+	min-width: 650px;
+	margin: 0 auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	position: relative;
+	transition-duration:.5s;
+	font-family:'Open Sans',sans-serif;
+}

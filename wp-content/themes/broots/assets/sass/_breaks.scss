@@ -1,0 +1,96 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+/*
+	div.subnavi-container.ipad {
+		width: 100%;
+		left:0;
+		right:0;
+		top:0;
+		z-index:9999999;
+		margin:auto;
+		position:fixed;
+		-webkit-transform: translate(0px)!important;
+
+		&::before{
+			content: '';
+			display: block;
+			width: 10000%;
+			height: 10000%;
+			position: fixed;
+			top: -100%;
+			left: -100%;
+			background:$dark_transparent;
+			z-index: 9;
+		}
+		& .subnavi{
+			position: absolute;
+			width: 102%;
+			height: 100%;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			margin:auto;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+	}
+*/
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

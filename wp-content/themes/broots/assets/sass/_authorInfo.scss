@@ -1,0 +1,274 @@
+.autor{
+margin-bottom: 5%;
+position: relative;
+transition-duration: .5s;
+background: #ccc;
+
+	& span.autorName {
+		font-size: 1.4em;
+		font-weight: bold;
+		position: absolute;
+		top: 145px;
+		left: 0;
+		padding-left: 175px;
+	}
+
+	& .socialholder {
+		position: absolute;
+		width: 100%;
+		top: 180px;
+		left: 0;
+		opacity: .5;
+		padding-left: 170px;
+
+		& a{
+			text-indent:-99999px;
+			float:left;
+		}
+	}
+}
+
+div[data-type="author"] {
+	width: 470px;
+	height: 240px;
+	position: relative;
+	text-align: center;
+	padding-top: 90px;
+	margin:0 auto;
+
+	& img{
+		margin-bottom: 0px;
+		bottom: 0;
+		float: left;
+		position: absolute;
+		max-width: 170px;
+		height: auto;
+		left: 0;
+	}
+}
+
+
+a{
+	&[data-ico]{
+		display: inline-block !important;
+		width: 40px;
+		height: 40px;
+		margin: 1px;
+
+		&::before {
+				content: '';
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url(img/ico/social-ico-sprite.svg);
+				background-size: 400px auto;
+				background-position: -120px -7px;
+		}
+	}
+	&[data-ico="Eigene"]{
+		&::before {
+			background-size:350px auto;
+			background-position: -307px -1px;
+		}
+		
+		&:hover::before{
+			background-size:350px auto;
+			background-position: -307px -45px;
+		}
+	}
+	&[data-ico="Facebook"]{
+		&::before {
+			background-position: -53px -5px;
+		}
+		&:hover::before{
+			background-position: -53px -55px;
+		}
+	}
+	
+	&[data-ico="Twitter"]{
+		&::before {
+			background-position: -5px -5px;
+		}
+		&:hover::before{
+			background-position: -5px -55px;
+		}
+	}
+	&[data-ico="Vimeo"]{
+		&::before {
+			background-position: -155px -5px;
+		}
+		&:hover::before{
+			background-position: -155px -55px;
+		}
+	}
+	&[data-ico="Xing"]{
+		&::before {
+			background-position: -255px -5px;
+		}
+		&:hover::before{
+			background-position: -255px -55px;
+		}
+	}
+	&[data-ico="Instagram"]{
+		&::before {
+			background-position: -305px -5px;
+		}
+		&:hover::before{
+			background-position: -305px -55px;
+		}
+
+	}
+	&[data-ico="Behance"]{
+		&::before {
+			background-position: -205px -6px;
+		}
+		&:hover::before{
+			background-position: -205px -56px;
+		}
+	}
+	&[data-ico="Mail"]{
+		&::before {
+			background-position: -105px -5px;
+		}
+		&:hover::before{
+			background-position: -105px -55px;
+		}
+	}
+}
+
+section.content{
+	width:80%;
+	left:0;
+	padding:10%;
+	position:relative;
+	float:left;
+	box-sizing:border-box;
+	font-family:'Open Sans',sans-serif;
+	& section[data-type="author-profil"] {
+		margin: 50px 0;
+		text-align: center;
+		
+		& a{
+			text-decoration: none;
+			color:$grey;
+			text-transform: uppercase;
+		}
+		& .inner {
+			display: inline-block;
+			position: relative;
+		}
+		& div.author {
+			width: 250px;
+			float: left;
+			padding: 5px;
+			
+			& .inner.profil{
+			}
+			& span[data-type="author"] {
+				display: block;
+				width: 100%;
+				line-height: 2em;
+				border-top: 2px solid #fff;
+				position: absolute;
+				margin-top: -5px;
+				border-radius: 30% 30% 100% 100%;
+			}
+		}
+	}
+	
+	& blockquote{
+		font-family:'Merriweather',serif;
+		font-weight:lighter;
+		font-style:italic;
+		font-size:1.5em;
+		margin:100px 0;
+	}
+}
+
+section.sideBar{
+	width:20%;
+	float:right;
+	position:relative;
+	padding:10% 10% 0 0;
+	box-sizing:border-box;
+	font-family:'Open Sans',sans-serif;
+
+	& time, & a, & span{
+		color:$grey;
+		text-decoration:none;
+		font-size:.8em;
+		display:block;
+		opacity: 0.3;
+
+			&:hover{
+				opacity: 1;
+			}
+	}
+	& span{
+		margin:100px 0;
+		opacity: 0.3;
+
+			&:hover{
+				opacity: 1;
+			}
+	}
+	& .widget-social{
+		margin-top:50px;
+	
+
+		& a{
+			text-indent: 30px;
+			line-height: 30px;
+			position:relative;
+			opacity: 0.3;
+
+			&:hover{
+				opacity: 1;
+			}
+	}
+}
+
+section[data-type="author-profil"] {
+	height: 250px;
+	padding: 0 125px;
+	
+	& .inner {
+		width: 100%;
+		height: 100%;
+	}
+	& .author {
+		font-family: 'Open Sans', sans-serif;
+		height: 100%;
+		width: 47%;
+		float: left;
+		position: relative;
+
+
+	}
+	& .profilImg{
+		width: 50%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+
+		.author:nth-child(even) &{
+			float:right;
+		}
+	}
+	& a{
+		color:$grey;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	& img{
+		width:200px;
+	}
+	}
+}
+

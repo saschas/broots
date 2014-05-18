@@ -1,0 +1,794 @@
+
+@import 'pre';
+
+
+
+
+body {
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	position:relative;
+	@include red; 
+
+}
+
+
+html,body{
+  width:100%;
+  height:100%;
+  @include smoothing(antialiased);
+
+
+}
+
+section {
+	width:100%;
+	position:relative;
+		text-align: center;
+
+}
+
+.inner-about {
+	width:96%;
+	max-width:640px;
+	margin:0 auto;
+	position: relative;
+	padding: 50px 0 0 0;
+}
+
+#heythere {
+	height:100%;
+	max-height:800px;
+	@include dark;
+	font-weight:700;
+	padding: 100px 0 0 0;
+
+	.gestalten {
+		background: url(../media/gestalten.svg);
+		@include bg-image;
+		background-size: 100%;
+		height:115px;
+		width:200px;
+		position: absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		margin:0 auto;
+	}
+
+}
+
+
+.spitzmarke-about {
+		@include font-xs;
+		float:left;
+		width:30%;
+		text-align: right;
+		padding: 22px 0 0 0;
+		left:0;
+		position: absolute;
+		font-weight: 700;
+	}
+
+	.headline-about {
+		@include font-xl;
+		width:68%;
+		float:left;
+		text-align: left;
+		right:0;
+		position: absolute;
+		font-weight: 700;
+
+		p {
+			@include font-xl;
+		}
+	}
+
+
+
+
+
+.platzhalter {
+	padding:30px 0 80px;
+	width:100%;
+	background: -webkit-linear-gradient(#a53030, #fe574a); 
+	background: -o-linear-gradient(#a53030, #fe574a); 
+	background: -moz-linear-gradient(#a53030, #fe574a); 
+	background: linear-gradient(#a53030, #fe574a); 
+
+	.spitzmarke-about {
+		margin:0px auto 0;
+		text-align: center;
+		position: relative;
+		width:100%;
+	}
+
+	.headline-about {
+		margin:10px auto 0;
+		text-align: center;
+		position: relative;
+		width:100%;
+	}
+
+	.date-coming {
+		@include font-l;
+		margin:1.5em 0 0em;
+		text-align: center;
+
+	}
+
+	.stay-tuned {
+		margin:0.5em 0 0 0;
+	}
+
+
+	a{
+		@include a-text(#fff);
+	}
+
+	a:hover {
+		color:#272727;
+		border-bottom:1px solid #272727;
+	}
+
+	.intro-platzhalter{
+		@include font-m;
+		text-align: left;
+		width:90%;
+		margin: 150px auto 0 ;
+		line-height: 1.7em;
+		font-family: 'Merriweather', serif;
+		font-weight: 300;
+		left:0;
+		right: 0;
+		position: relative;
+
+	}
+}
+
+.eye {	position: absolute;
+		margin: 60px 0 0 0;
+		height:30px;
+		width:30px;
+		-webkit-animation: blink 4s infinite;
+
+	& img{
+	/*background: url(../media/eye.svg);
+		@include bg-image;
+		background-size: 50px 50px;*/
+		height:100%;
+		width:100%;
+}
+
+}
+
+.lefty {left:7%;
+
+}
+
+.righty {right:7%;
+	
+}
+
+
+
+
+
+
+
+
+
+#quote-broots {
+	padding:0 0 0 0;
+	@include blue;
+	font-family: 'Merriweather', serif;
+
+
+	p{
+		@include font-m;
+		width: 96%;
+		text-align: left;
+		margin: 0 auto;
+		line-height: 1.5em;
+	}
+
+	.diedrei {
+		position: relative;
+		height:70px;
+		width:250px;
+		margin:50px auto 0;
+
+		div{
+		position: relative;
+		bottom:0;
+		top:auto;
+		left:0;
+		right:0;
+		float:left;
+
+			& img {
+				height:100%;
+				width:100%;
+			}
+		}
+
+		.monster1 {
+			-webkit-animation:swap 5s infinite;
+			height:70px;
+			width:80px;
+		}	
+
+		.monster2 {
+			-webkit-animation:swap 6s infinite;
+			height:70px;
+			width:86px;
+		}	
+
+		.monster3 {
+			-webkit-animation:swap 7s infinite;
+			height:60px;
+			width:70px;
+			margin:10px 0 0 10px;
+		}	
+
+	}
+}
+
+#explaination {
+	@include font-l;
+	color: #fff;
+	font-weight:700;
+	line-height: 1.5em;
+	font-family: 'Merriweather', serif;
+	width:90%;
+	margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------ repeating grafiks*/
+
+
+.button-outer {
+		width:100px;
+		height: 100px;
+		position: relative;
+		margin: 0 auto;
+		@include border-radius(90px);
+		@include dark;
+		border:20px solid #ffffff;
+		z-index:2;
+		-webkit-animation: start 2s infinite;
+}
+
+.inner-circle {
+			width:40px;
+			height:40px;
+			@include border-radius(20px);
+			@include red;
+			margin: 30px 0 0 30px;
+			position: absolute;
+			left:0;
+    		right:0;
+    		cursor:pointer;
+
+
+}
+
+.linevertical {
+		@include linevertical(150px);
+		margin:30px 0 0 -150px;
+
+}
+
+
+
+
+/*----------- grafik krams*/
+
+
+
+
+.step-further {
+	@include font-xl;
+	padding:50px 0 100px 0;
+	font-weight: 700;
+
+
+	.start-about {
+		text-align: center;
+
+		p {
+			padding: 0 0 40px;
+		}
+
+		.button-outer{
+			margin:30px auto 0;
+		}
+	}
+
+	.line {
+		height:120px;
+		@include line(#272727);
+	}
+}
+
+
+.pre-production {
+	height:800px;
+	@include dark;
+
+	.line {
+		height:40px;
+		@include line(#fff);
+		top:0;
+	}
+
+	.line2 {
+		height:50px;
+		@include line(#fff);
+		bottom:0;
+	}
+
+	.inner-circle {
+    	margin: 0 auto;
+    	top:40px;
+    	@include white;
+    	-webkit-animation: start 2s infinite;
+	}
+
+	.launchfirst {
+		height:260px;
+		width:260px;
+		@include border-radius(140px);
+		@include box-sizing(border-box);
+		border:3px solid #fff;
+		position: absolute;
+		bottom:50px;
+		z-index: 3;
+		left:0;
+		right:0;
+		margin: 0 auto;
+
+		
+		.inner-text {
+			padding:60px 20px 20px 20px;
+			text-align:center;
+			@include font-xl;
+		}
+
+		.small {
+			@include font-l;
+		}
+	}
+
+	.right-collum {
+		width:90%;
+		text-align: left;
+		right:0;
+		position: relative;
+		@include font-m;
+		margin:70px auto 0;
+	}
+}
+
+
+.event-production {
+	height:800px;
+	@include font-m;
+	color: #272727;
+
+	.description-event {
+		width:90%;
+		text-align: left;
+		position: relative;
+		margin:50px auto 0;
+
+		p {
+			@include font-xl;
+			padding:0 0 30px 0;
+			text-align: center;
+		}
+	}
+
+	.text-rec {
+		position: relative;
+		margin:70px auto 0;
+		@include font-s;
+	}
+
+	.graphics-event {
+		margin:20px 0 0 0;
+	}
+
+	.record {
+			width:80px;
+			height:80px;
+			@include border-radius(41px);
+			@include box-sizing(border-box);
+			@include dark;
+			border:2px solid #fff;
+			position:relative;
+			left:0;
+			margin:20px auto 0;
+			z-index:10;
+
+			.record-sign {
+				-webkit-animation: Pulse 2s infinite;
+				width:30px;
+				height:30px;
+				@include border-radius(15px);
+				background-color: #ff1800;
+				margin:23px 0 0 23px;
+			}
+		}
+
+	.line {
+		height:100px;
+		@include line(#353535);
+		top:0;
+	}
+
+	.line2 {
+		height:100px;
+		@include line(#353535);
+		bottom:0;
+	}
+}
+
+
+
+
+.work-ip {
+	@include dark;
+	height:770px;
+	@include font-m;
+
+	.line {
+		height:70px;
+		@include line(#ffffff);
+		top:0;
+	}
+
+	.line2 {
+		height:100px;
+		@include line(#ffffff);
+		bottom:0;
+	}
+
+	.inner-circle {
+		margin:  0px auto 0;
+    	@include white;
+    	-webkit-animation: start 2s infinite;
+    	position: relative;
+	}
+
+	.wheels {
+		position: relative;
+		margin:90px auto 0;
+		width:160px;
+
+		.gear {
+			background: url(../media/gear.svg);
+			@include bg-image;
+			background-size: 80px;
+			height:80px;
+			width:80px;
+			float: left;
+			 -webkit-animation: spincw 4000ms infinite linear;
+		}
+
+		.anders {				
+			background: url(../media/gear2.svg);
+			@include bg-image;
+			background-size: 80px;
+			height:80px;
+			width:80px;
+			-webkit-animation: spinccw 4000ms infinite linear;
+			margin:0 0 0 80px;
+		}
+	}
+
+	.cloud {
+		background: url(../media/cloud.svg);
+		@include bg-image;
+		background-size: 200px;
+		height:200px;
+		position: relative;
+		margin:0px auto 0;
+		width:200px;
+
+
+		#wtf {
+			margin:  0px auto 0;
+    		@include white;
+    		-webkit-animation: start 2s infinite;
+    		position: relative;
+    		bottom:0;
+		}
+
+	}
+
+	.text-work {
+		width:90%;
+		margin: 40px auto;
+		position: relative;
+		text-align: cenetr;
+	}
+
+}
+
+
+
+
+
+
+.final-launch {
+	height:500px;
+	@include font-xl;
+	font-weight: 700;
+
+	p {
+		position: relative;
+		width:100%;
+		margin:130px auto;
+		text-align:center;
+
+	}
+
+	.line {
+
+		height:100px;
+		@include line(#ffffff);
+		bottom:auto;
+		top:0;
+
+	}
+
+
+	.button-outer {
+		top:100px;
+	}
+
+}
+
+
+
+
+/*------------ animations */
+
+
+
+
+@-webkit-keyframes Pulse {
+  from { background-color: #9e0b00; -webkit-box-shadow: 0 0 9px #272727; }
+  50% { background-color: #ff1800; -webkit-box-shadow: 0 0 18px #ff1800; }
+  to { background-color: #9e0b00; -webkit-box-shadow: 0 0 9px #272727; }
+}
+
+@-webkit-keyframes start {
+  from { -webkit-box-shadow: 0 0 20px #fff;}
+  50% { -webkit-box-shadow: 0 0 2px #fff; }
+  to { -webkit-box-shadow: 0 0 20px #fff;}
+}
+
+@-webkit-keyframes spincw {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}  
+}
+@-webkit-keyframes spinccw {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}  
+}
+
+@-webkit-keyframes blink {
+    0%  {height:30px;}
+    10% {height:5px;}
+    20% {height:30px;}  
+}
+
+@-webkit-keyframes swap 
+{
+0% {-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);}
+1% {-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);}
+69% {-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);}
+70% {-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);}
+
+}
+
+
+
+
+
+.huzzle {
+	background: url(../media/disco.gif);
+	background-size: 100%;
+	@include background-size(cover);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.wtf {
+	background: url(../media/power.gif);
+	background-size: 100%;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.sceptic {
+	background: url(../media/eddy.gif);
+	background-size: 100%;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.twin {
+	background: url(../media/twinpeaks.gif);
+	background-size: 100%;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.cat {
+	background: url(../media/cat.gif);
+	background-size: 100%;
+	background-position: 50%;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.door {
+	background: url(../media/door.gif);
+	background-size: 100%;
+	background-position: 50%;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+
+#cat, #twin, #door {cursor:pointer;}
+
+
+
+.dieMacher {
+	position: relative;
+	height: 1200px;
+	@include dark;
+
+	p {
+		position: relative;
+		width:100%;
+		margin:30px auto 0;
+		text-align:center;
+		@include font-xl;
+
+	}
+
+	.inner-about {
+		width:90%;
+		padding:20px 0 0 0;
+	}
+	ul {
+		height:230px;
+		margin:0 auto;
+		text-align: left;
+
+		li {
+			width:90%;
+			position: relative;
+			margin: 0 auto;
+			border-bottom: 1px solid #3d3d3d;
+			padding: 0 0 50px 0;
+		
+			.description {
+				position: relative;
+				margin:30px 0 3em 0;
+				@include font-s;
+			}
+
+			.social-about{
+				width:100px;
+				margin:0 auto;
+			}
+			.social-about a{
+				position: relative;
+				@include bg-image;
+				background-size: contain;
+				height:40px;
+				width:40px;
+				position: relative;
+			}
+		}
+
+		.bett-macher {
+			left:0;
+			position: relative;
+
+			.bett-logo img{
+				width:100%;
+
+			}
+
+		}
+
+		.sue-macher {
+			right:0;
+			position: relative;
+		
+		.sue-logo img{
+			width:100%;
+			}
+		}
+	}
+}
+
+
+a.twitter-about {
+	background: url(../media/twitter.svg);
+	background-position: center center;
+	float: left;
+	display:block;
+	opacity: 0.7;
+}
+
+a.twitter-about:hover {
+	opacity: 1;
+}
+
+a.fb-about:hover {
+	opacity: 1;
+}
+
+a.fb-about {
+	background: url(../media/facebook.svg);
+	display:block;
+	opacity: 0.7;
+	margin:0 0 0 70px;
+}
+
+
+
+
+/* ------------ media  queries */
+
+

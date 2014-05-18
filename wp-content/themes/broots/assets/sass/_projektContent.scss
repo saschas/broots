@@ -1,0 +1,125 @@
+.wrapper{
+
+}
+
+div.project, section.hauptprojekt {
+	@include sectionStyle;
+	
+
+	& h1{
+		font-weight: 700;
+		font-size: 5em;
+		line-height: 1em;
+
+
+		& a{
+			text-decoration: none;
+			color:$darkgrey;
+		}
+	}
+	& h2{
+		font-size:2em;
+		margin-bottom: 20px;
+	}
+	& p {
+		margin-bottom: 2em;
+		padding-left: 5em;
+		color: $darkgrey;
+		line-height: 1.6em;
+		max-width: 90%;
+		font-size: 1.4em;
+	}
+	& header{
+		margin:20px 0;
+		
+		& span[data-type="author"]{
+			box-shadow:none;
+		}
+	}
+	& .intro p{
+		font-size: 2em;
+		font-weight: bold;
+		line-height: 1.6em;
+		margin-bottom: 3em;
+		padding-left:0;
+		position: relative;
+		width: 80%;
+	}
+	& span[data-type="notiz"]{
+		float: left;
+		font-family: 'Open Sans',sans-serif;
+		display: inline-block;
+		width: 20%;
+		margin: 50px;
+		position: relative;
+		font-size: 1em;
+        color: #696971;
+        line-height: 1.5em;
+        margin: 50px 70px 50px 0px;
+
+		& h2{
+			font-size: 1.1rem;
+		}
+	}
+	& span[data-type="author"] {
+		position: relative;
+		float: right;
+		box-shadow: 0 -3px 2px 0 rgba(0,0,0,0.07);
+		& span{
+			display: block;
+			padding: 0 0 10px 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: 'Open Sans';
+			color: #333;
+		}
+	}
+	& blockquote,& blockquote p{
+		padding: 0!important;
+		margin: 0 !important;
+		max-width: inherit!important;
+		display: block;
+		width:100%;
+        font-size: 1.3em;
+        margin-top: 1em;
+		margin-bottom: 1em;
+		position: relative;
+		font-weight: 800;
+
+		&::before{
+			content:' ';
+		}
+		&::after{
+			content:' ';
+		}
+	}
+
+	& section[data-type="author-profil"] {
+		margin: 50px 0;
+		text-align: center;
+	}
+	& .inner {
+		display: inline-block;
+		position: relative;
+	}
+	& div.author {
+		width: 250px;
+		float: left;
+		padding: 5px;
+		
+		& .inner.profil{
+		}
+		& span[data-type="author"] {
+			display: block;
+			width: 100%;
+			line-height: 2em;
+			border-top: 2px solid #fff;
+			position: absolute;
+			margin-top: -5px;
+			border-radius: 30% 30% 100% 100%;
+		}
+	}
+}
+
+
+

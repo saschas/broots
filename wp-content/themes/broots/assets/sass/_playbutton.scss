@@ -1,0 +1,86 @@
+.play {
+	width: 200px;
+	height:200px;
+	transition-duration:.15s;
+	border: 20px solid $neon;
+	border-radius: 50%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin: auto;
+	cursor:pointer;
+	z-index: 999999;
+	&::before{
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		border-right: 50px solid transparent;
+		border-left: 80px solid $neon;
+		border-bottom: 50px solid transparent;
+		border-top: 50px solid transparent;
+		position: absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:30%;
+		margin:auto;
+	}
+	&::after{
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		padding-bottom:100%;
+	}
+
+	$playHeight:40px;
+	$playwidth:20px;
+	$playMargin:5px;
+
+	&.playing {
+		cursor: pointer;
+		width: $playwidth*2+$playMargin;
+		height: $playHeight;
+		border: none;
+		position: absolute;
+		top: 20px;
+		left:45px;
+		bottom: initial;
+		right: initial;
+		border-radius: 0;
+		display: none;
+
+		&::before{
+			content: '';
+			display: block;
+			width: $playwidth;
+			height: $playHeight;
+			pointer-events:none;
+			border: none;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			right: initial;
+			bottom: initial;
+			background: $neon;
+		}
+		&::after{
+			content: '';
+			display: block;
+			width: $playwidth;
+			height: $playHeight;
+			border: none;
+			position: absolute;
+			pointer-events:none;
+			top: 0;
+			left: $playwidth + $playMargin;
+			right: initial;
+			bottom: initial;
+			padding-bottom: initial;
+			background: $neon;
+		}
+	}
+}//end of play
