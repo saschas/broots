@@ -96,6 +96,10 @@ jQuery(document).ready(function($){
 			$('.autor div[data-type="author"]').css({float:'left'});
 			$('.autor .inner').css({width: '940px',margin: '0 auto', position: 'relative'});
 		}
+		else{
+			$('.autor div[data-type="author"]').css({float:'none'});
+			$('.autor .inner').css({width: '940px',margin: '0 auto', position: 'relative'});
+		}
 
 		//on Time Change
 		var $currentTimer = $('.timeline .current');
