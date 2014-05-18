@@ -58,8 +58,7 @@ div.subnavi-container {
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 99999999;
-  -webkit-box-shadow: inset -79px 0 70px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: inset -79px 0 70px 0 rgba(0, 0, 0, 0.2); }
+ 
   .subnavi .inner {
     width: 100%;
     position: relative;
