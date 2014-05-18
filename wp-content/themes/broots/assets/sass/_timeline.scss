@@ -10,7 +10,7 @@
 		min-height: 45px;
 		z-index: 9;
 
-	.no-touch{
+	.no-touch &{
 	 	&:hover{
 			transition-duration:.25s;
 			min-height:300px!important;
