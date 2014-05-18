@@ -182,14 +182,13 @@ jQuery(document).ready(function($){
 	var origin = window.location.origin;
 	var root = origin+pathname;
 	var getContent = function ($link){
-		$("#content").load(root+ $link, function( response, status, xhr ) {
+		$("#content").empty().load(root+ $link, function( response, status, xhr ) {
 			if ( status === "error" ) {
 			  var msg = "Sorry but there was an error: ";
 			  $('#content').html();
 //			  $( "#content" ).text( msg + xhr.status + " " + xhr.statusText );
 			}
 			if( status === 'success'){
-				
 				$('.loading').fadeOut(function(){
 					$('#content').fadeIn();
 				});
