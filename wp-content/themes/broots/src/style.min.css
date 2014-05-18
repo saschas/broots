@@ -83,27 +83,28 @@ div.subnavi-container {
     width: 100%;
     position: relative;
     padding: 50px 0;
-    top: 0; }
+    top: 0;
+    -webkit-font-smoothing:antialiased; }
     .subnavi .inner .info {
-      border-top: 1px solid rgba(150, 150, 150, 0.5);
       border-bottom: 1px solid rgba(150, 150, 150, 0.5);
       padding: 50px 20px; }
       .subnavi .inner .info:hover {
         background-color: #302f3b;
         cursor: pointer; }
       .subnavi .inner .info time, .subnavi .inner .info h2 {
-        font-size: 1.5em;
+        font-size: 2em;
         font-weight: 400; }
-      .subnavi .inner .info time, .subnavi .inner .info h2, .subnavi .inner .info span, .subnavi .inner .info .playButton {
+      .subnavi .inner a{color:#fe574a;}
+      .subnavi .inner .info span, .subnavi .inner .info .playButton {
         font-family: 'Open Sans',sans-serif;
         color: #fe574a; }
       .subnavi .inner .info span[data-type="author"] {
         display: block;
-        color: #fff;
+        color: #ededed;
         font-weight: 100;
-        font-size: 0.8em;
-        margin-top: 10px;
-        margin-bottom: 30px;
+        font-size: 1em;
+        margin-top: 20px;
+        margin-bottom: 40px;
         text-transform: uppercase; }
         .subnavi .inner .info span[data-type="author"] span {
           color: #dddce1;
@@ -114,8 +115,8 @@ div.subnavi-container {
             content: ''; }
       .subnavi .inner .info blockquote {
         font-family: 'Merriweather',serif;
-        color: #79787d;
-        font-size: .8em;
+        color: #fff;
+        font-size: 1.2em;
         line-height: 1.8em;
         margin-bottom: 35px; }
         .subnavi .inner .info blockquote::before {
@@ -123,7 +124,7 @@ div.subnavi-container {
         .subnavi .inner .info blockquote::after {
           content: '»'; }
       .subnavi .inner .info .playButton {
-        font-size: .8em;
+        font-size: 1em;
         padding-left: 20px;
         position: relative;
         text-transform: uppercase; }
@@ -394,7 +395,7 @@ section.nextread {
   .timeline div.box {
     height: 50px;
     position: absolute;
-    border-left: 5px solid #fff;
+    border-left: 2px solid #fff;
     left: 5%;
     padding-left: 10px;
     color: #fff;
@@ -521,44 +522,49 @@ div.project, section.hauptprojekt {
   max-width: 1280px;
   min-width: 650px;
   margin: 0 auto;
-  margin-top: 5%;
   margin-bottom: 2%;
   position: relative;
   -webkit-transition-duration: .5s;
   transition-duration: .5s; 
-  font-weight: 900;}
+  font-weight: 900;
+  color:#272727;}
   div.project h1, section.hauptprojekt h1 {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 5em;
-    line-height: 1em; }
+    line-height: 1.3em;
+    position: relative;
+    max-width:800px;
+    letter-spacing: -2px;
+    /*font-family: 'Open Sans';*/ }
     div.project h1 a, section.hauptprojekt h1 a {
       text-decoration: none;
       color: #323232; }
   div.project h2, section.hauptprojekt h2 {
-    font-size: 2em;
-    margin-bottom: 20px; }
+    font-size: 1.7em;
+    margin-bottom: 14px; }
   div.project p, section.hauptprojekt p {
     margin-bottom: 2em;
-    padding-left: 5em;
-    color: #323232;
+    padding-left: 3em;
     line-height: 1.6em;
-    max-width: 90%;
+    max-width: 80%;
     font-size: 1.4em;
     font-family: 'Open Sans';
     font-weight: 400; }
   div.project header, section.hauptprojekt header {
-    margin: 20px 0; }
+    margin: 20px 0 35px; }
     div.project header span[data-type="author"], section.hauptprojekt header span[data-type="author"] {
       -webkit-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none;
+      font-weight: 400;  }
   div.project .intro p, section.hauptprojekt .intro p {
-    font-size: 2em;
+    font-size: 2.6em;
     font-family: 'Open Sans';
     font-weight: bold;
-    line-height: 1.6em;
-    margin-bottom: 3em;
+    line-height: 1.3em;
+    margin-bottom: 2em;
     padding-left: 0;
     position: relative;
+    color: #272727;
     width: 80%; }
   div.project span[data-type="notiz"], section.hauptprojekt span[data-type="notiz"] {
     float: left;
@@ -574,9 +580,9 @@ div.project, section.hauptprojekt {
       font-size: 1.1rem; }
   div.project span[data-type="author"], section.hauptprojekt span[data-type="author"] {
     position: relative;
-    float: right;
-    -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.07);
-    box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.07); }
+   /* -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.07); */
+    font-size:1.5em;}
     div.project span[data-type="author"] span, section.hauptprojekt span[data-type="author"] span {
       display: block;
       padding: 0 0 10px 0;
@@ -586,19 +592,19 @@ div.project, section.hauptprojekt {
       color: #333; }
   div.project blockquote, div.project blockquote p, section.hauptprojekt blockquote, section.hauptprojekt blockquote p {
     padding: 0 !important;
-    margin: 0 !important;
     max-width: inherit !important;
     display: block;
-    width: 100%;
-    font-size: 1.3em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    width: 80%;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1.5em;
     position: relative;
     font-weight: 800; }
     div.project blockquote::before, div.project blockquote p::before, section.hauptprojekt blockquote::before, section.hauptprojekt blockquote p::before {
-      content: ' '; }
+      content: '«'; }
     div.project blockquote::after, div.project blockquote p::after, section.hauptprojekt blockquote::after, section.hauptprojekt blockquote p::after {
-      content: ' '; }
+      content: '»'; }
   div.project section[data-type="author-profil"], section.hauptprojekt section[data-type="author-profil"] {
     margin: 50px 0;
     text-align: center; }
