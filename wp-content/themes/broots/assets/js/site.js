@@ -43,24 +43,33 @@ else{}
 		$('html,body').animate({scrollTop: window.innerHeight}).removeAttr('style');
 	});
 
-	$($handler).clickToggle(
+	$($handler).click(function(){
+		if($('.subnavi-container').hasClass('open')){
+			$($hoverClicker).addClass('closed').removeClass('open');
+			$('body').css({
+				'overflow-y':'visible'
+			});
+		}
+		else{
+			$($hoverClicker).addClass('open').removeClass('closed');
+			$('body').css({
+				'overflow-y':'hidden'
+			});
+		}
+	});
+
+	/*
 		function(){
 			$($hoverClicker).addClass('open').removeClass('closed');
 			$('body').css({
 				'overflow-y':'hidden'
 			});
-			//$('#menu, .main-wrapper').addClass('open').removeClass('closed');
-			//$($elementsToMove).addClass('open').removeClass('closed');
 		},
 		function(){
 			$($hoverClicker).addClass('closed').removeClass('open')
-			$('body').css({
-				'overflow-y':'visible'
-			});
-			//$('#menu, .main-wrapper').addClass('closed').removeClass('open');
-			//$($elementsToMove).addClass('closed').removeClass('open');
+			
 	});//end of hoverClickToggle
-
+*/
 	window.onscroll = function () {
 			var $timelineContainer = $('#content');
 			var $timeline = $('.timeline');

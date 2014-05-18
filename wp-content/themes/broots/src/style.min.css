@@ -625,7 +625,8 @@ div.project, section.hauptprojekt {
   transition-duration: .5s;
   background: #ccc; }
   .autor .inner {
-    width: 100% !important; }
+    width: 100% !important;
+    max-width: 900px; }
   .autor span.autorName {
     font-size: 1.4em;
     font-weight: bold;
