@@ -827,88 +827,91 @@ section.sideBar {
   -webkit-transition-duration: .5s;
   transition-duration: .5s; }
   .relatedContent .teaser {
-    width: 100%;
-    left: 0;
-    min-height: 250px;
-    position: relative;
+    width: 50%;
     float: left;
+    min-height: 500px;
+    position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Open Sans',sans-serif;
     background: #ccc;
-    margin-bottom: 2px;
-    cursor: pointer; }
-    .relatedContent .teaser:hover {
-      background: #bdbdbd; }
+    margin-bottom: 3em;
+    cursor: pointer;
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-shadow: 0 0 1.9em 0px rgba(50, 50, 50, 0.05);
+    box-shadow: 0 0 1.9em 0px rgba(50, 50, 50, 0.05); }
+    .relatedContent .teaser::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition-duration: .25s;
+      transition-duration: .25s;
+      opacity: 0.85;
+      background: #302f3b; }
+    .relatedContent .teaser a, .relatedContent .teaser p {
+      font-size: 0.8em;
+      line-height: 2em;
+      color: #fff;
+      padding: 0 8vw; }
+    .relatedContent .teaser:hover::before {
+      -webkit-filter: blur(20px);
+      -moz-filter: blur(20px);
+      filter: blur(20px);
+      opacity: 0; }
+    .relatedContent .teaser:hover .info {
+      display: none; }
+    .relatedContent .teaser:hover .play {
+      display: block; }
     .relatedContent .teaser a.teaserLink {
       display: block;
       width: 100%;
       height: 100%;
       position: absolute; }
-    .relatedContent .teaser a.playLink {
+    .relatedContent .teaser a.backgroundLink {
       width: 100%;
       height: 100%;
-      display: block;
-      display: block; }
-    .relatedContent .teaser a.backgroundLink {
-      width: 15%;
-      min-width: 250px;
-      height: 100%;
-      position: absolute; }
+      position: absolute;
+      color: #fff; }
+    .relatedContent .teaser a.playButton {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
     .relatedContent .teaser .inner {
       width: 100%;
       height: 100%;
-      max-width: 1280px;
+      display: table;
+      position: absolute;
+      top: 0;
       left: 0;
       right: 0;
-      margin: auto;
-      border-right: 1px solid #dddce1; }
+      bottom: 0;
+      margin: auto; }
     .relatedContent .teaser .info {
-      width: 60%;
-      float: right;
-      position: relative;
-      height: 100%;
-      padding: 2em;
+      text-align: center;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      display: table; }
-    .relatedContent .teaser .left {
-      width: 70%;
-      height: 100%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-      .relatedContent .teaser .left img {
-        height: 200px;
-        float: left;
-        margin-right: 20px; }
-    .relatedContent .teaser .right {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      border-left: 1px solid #dddce1;
-      height: 100%;
-      /*&::after{
-      	content: '';
-      	display: block;
-      	width: 350px;
-      	top: 0;
-      	left: 0;
-      	position: absolute;
-      	border-right: 1px solid $lightgrey;
-      	height: 100%;
-      }*/ }
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 2em;
+      font-family: 'Merriweather',serif;
+      line-height: 3em; }
     .relatedContent .teaser .backgroundProject {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat; }
+      color: #fff;
+      font-weight: bold; }
     .relatedContent .teaser .play {
       width: 100px;
       height: 100px;
@@ -916,7 +919,8 @@ section.sideBar {
       transition-duration: .5s;
       border: 10px solid #fe574a;
       border-radius: 50%;
-      cursor: pointer; }
+      cursor: pointer;
+      display: none; }
       .relatedContent .teaser .play::before {
         border-right: 20px solid transparent;
         border-left: 30px solid #fe574a;
