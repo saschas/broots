@@ -127,7 +127,7 @@ jQuery(document).ready(function($){
 		  if($videoCurrentTimeNormalized === $duration){
 		  	$('.video.main').addClass('finished');
 		  	$('.nextread').show().animate({right:'0%'},250);
-		  	video.currentTime = 0;
+		  	video.currentTime = 1;
 		  	video.pause();
 		  	$('.timeline, .play').animate({right:'-50%'});
 		  	//show next Post
